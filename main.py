@@ -1,3 +1,4 @@
+#! /usr/bin/python
 from __future__ import print_function
 import db, os, sys, re
 import argparse
@@ -29,6 +30,8 @@ if args.add:
 elif args.host:
 	key = db.getKey(dbcursor, args.host)
 	print(json.dumps(tf2_key(*key)))
+else:
+  sys.exit(1)
 # Close the cursor & commit the DB one last time just for good measure
 dbcursor.close()
 dbconn.commit()
