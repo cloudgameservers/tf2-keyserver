@@ -27,8 +27,9 @@ if args.add:
   key = tf2_key(int(args.add[0]), args.add[1], args.add[2], args.host)
   db.addKey(dbcursor, key)
 elif args.host:
-	print(json.dumps(tf2_key(*key)))
   key = db.getKey(dbcursor, args.host)
+  for entry in key:
+    print(entry)
 else:
   sys.exit(1)
 # Close the cursor & commit the DB one last time just for good measure
