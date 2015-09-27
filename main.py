@@ -18,7 +18,7 @@ dbcursor = dbconn.cursor()
 
 parser = argparse.ArgumentParser(description='Manage TF2 keys')
 parser.add_argument('-a', '--add', nargs=3,
-	help="Add key, format: <server_account> <server_token> <steam_account>"
+  help="Add key, format: <server_account> <server_token> <steam_account>"
 )
 parser.add_argument('host', nargs='?', help="Host to retrieve keys for")
 args = parser.parse_args()
