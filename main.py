@@ -5,7 +5,7 @@ import json
 import sys
 from collections import namedtuple
 
-from db import tf2_db
+from db import tf2db
 
 tf2_key = namedtuple('tf2_key', "server_account server_token steam_account host")
 db = tf2db()

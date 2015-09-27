@@ -2,7 +2,7 @@ from __future__ import print_function
 import sqlite3
 import os
 
-class tf2db(Object):
+class tf2db(object):
 
   def __init__(self, dbPath="tf2_keys.db"):
     # probably should do a check for dbpath being non-absolute...
